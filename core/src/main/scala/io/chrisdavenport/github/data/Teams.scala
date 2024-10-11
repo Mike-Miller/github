@@ -32,7 +32,7 @@ object Teams {
   object AddTeamRepoPermission {
     implicit val encoder: Encoder[AddTeamRepoPermission] = new Encoder[AddTeamRepoPermission]{
       def apply(a: AddTeamRepoPermission): Json = Json.obj(
-        "permissions" -> a.permission.asJson
+        "permission" -> a.permission.asJson
       )
     }
   }
